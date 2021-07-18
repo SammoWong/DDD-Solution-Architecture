@@ -4,8 +4,4 @@
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Dsa.Domain.Core\Dsa.Domain.Core.csproj" />
-  </ItemGroup>
-
 </Project>
