@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dsa.Domain.Repositories
+namespace Dsa.Domain.Interfaces
 {
     public interface IOrderRepository : IRepository<Order>
     {
