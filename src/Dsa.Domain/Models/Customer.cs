@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace Dsa.Domain.Models
 {
-    public class Order : Entity<long>
+    public class Customer : Entity<long>
     {
-        public string No { get; set; }
+        public string FullName { get; set; }
 
-        public long CustomerId { get; set; }
+        public string UserName { get; set; }
 
-        public Address Address { get; set; }
+        public string Email { get; set; }
+
+        public string Mobile { get; set; }
 
         public bool IsDeleted { get; set; }
 
@@ -25,8 +27,6 @@ namespace Dsa.Domain.Models
 
         public DateTime? ModifiedTime { get; set; }
 
-        public virtual Customer Customer { get; set; }
-
-        public virtual ICollection<OrderItem> OrderItems { get; set; }
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }
