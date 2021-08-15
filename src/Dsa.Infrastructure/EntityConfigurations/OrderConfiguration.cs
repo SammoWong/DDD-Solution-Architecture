@@ -27,13 +27,13 @@ namespace Dsa.Infrastructure.EntityConfigurations
             builder.Property(e => e.ModifiedTime).HasColumnType("datetime(6)");
 
             //设置表之间关系
-            builder.HasMany(e => e.OrderItems).WithOne(e => e.Order).HasForeignKey(e => e.OrderId);
+            builder.HasMany(e => e.Items).WithOne(e => e.Order).HasForeignKey(e => e.OrderId);
 
             //设置索引
             builder.HasIndex(e => e.No);
 
             //设置值对象
-            builder.OwnsOne(e => e.Address, a =>
+            builder.OwnsOne(e => e.ShippingAddress, a =>
             {
                 a.Property(s => s.Province).HasColumnName("Province").HasColumnType("varchar(32)");
                 a.Property(s => s.City).HasColumnName("City").HasColumnType("varchar(32)");
