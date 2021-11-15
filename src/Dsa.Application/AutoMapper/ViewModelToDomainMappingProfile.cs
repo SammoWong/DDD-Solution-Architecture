@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Dsa.Application.ViewModels;
+using Dsa.Application.ViewModels.Orders;
 using Dsa.Domain.Models;
 
 namespace Dsa.Application.AutoMapper
@@ -11,7 +12,7 @@ namespace Dsa.Application.AutoMapper
     {
         public ViewModelToDomainMappingProfile()
         {
-            CreateMap<OrderViewModel, Order>();
+            CreateMap<OrderDto, Order>();
         }
     }
 }

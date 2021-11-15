@@ -1,12 +1,13 @@
-﻿using System;
+﻿using MediatR;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dsa.Application.ViewModels
+namespace Dsa.Domain.Events
 {
-    public class OrderViewModel
+    public class OrderCreatedEvent : INotification
     {
     }
 }
